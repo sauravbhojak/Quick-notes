@@ -4,5 +4,6 @@ from .import views
 urlpatterns = [
   path('',views.indexpage,name='indexpage'),
   path('notes/',views.notes,name='notes'),
-  path('up_note/<int:pk>',views.edit,name='up_note')
+  path('up_note/<int:pk>',views.edit,name='up_note'),
+  path('del/<int:pk>',views.delete,name='del')
 ]
