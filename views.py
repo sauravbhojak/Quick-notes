@@ -37,3 +37,8 @@ def edit(request,pk):
         note = Note.objects.get(id=pk)
         request.session['id']=note.id
         return render(request,'app/up_note.html',{'data':note})
+    
+ def delete(request,pk):
+    note = Note.objects.get(id=pk)
+    note.delete()
+    return redirect('indexpage')
